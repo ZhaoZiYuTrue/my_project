@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "dva";
 import styles from "./IndexPage.less"; // no-unused-vars
+import CartoonBar from "../components/js-cartoon-side-bar/js/CartoonSideBar.js";
 
 class IndexPage extends Component {
   state = {
@@ -85,7 +86,7 @@ class IndexPage extends Component {
     // Assuming "?post=1234&action=edit"
     let paramsString = "?post=1234&action=edit";
     let urlParams = new URLSearchParams(paramsString);
-    console.log(new URLSearchParams())
+    console.log(new URLSearchParams());
 
     console.log(urlParams.has("post")); // true
     console.log(urlParams.get("action")); // "edit"
@@ -115,7 +116,8 @@ class IndexPage extends Component {
         <br />
         <br />
         <br />
-        <label>{this.state.tempValue}</label>
+        <div>{this.state.tempValue}</div>
+        <CartoonBar />
       </div>
     );
   };
