@@ -14,14 +14,11 @@ class IndexPage extends Component {
   };
 
   removeForgeValueFromArray = () => {
-    let myArray = [0, undefined, null, false];
-    myArray
-      .map((item) => {
-        // ...
-      })
-      // Get rid of bad values
-      .filter(Boolean);
-    console.log(myArray);
+    let myArray = [0, undefined, null, false, 1];
+    // Get rid of bad values
+    let temp = myArray.filter(Boolean);
+    console.log('before', myArray);
+    console.log('after', temp);
   };
 
   // 创建一个纯“字典”对象
