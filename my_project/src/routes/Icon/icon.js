@@ -82,16 +82,12 @@ class Icon extends Component {
         <span><i className={iconStyles.icono_tiles}></i></span>
         <span><i className={iconStyles.icono_list}></i></span>
         <span><i className={iconStyles.icono_forbidden}></i></span>
-        
         <span><i className={iconStyles.icono_plusCircle}></i></span>
-
         <span><i className={iconStyles.icono_crossCircle}></i></span>
-
         <span><i className={iconStyles.icono_checkCircle}></i></span>
         <span><i className={iconStyles.icono_exclamationCircle}></i></span>
         <span><i className={iconStyles.icono_exclamation}></i></span>
         <span><i className={iconStyles.icono_textAlignRight}></i></span>
-
         <span><i className={iconStyles.icono_textAlignCenter}></i></span>
         <span><i className={iconStyles.icono_textAlignLeft}></i></span>
         <span><i className={iconStyles.icono_indent}></i></span>

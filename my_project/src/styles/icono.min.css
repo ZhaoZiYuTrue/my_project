@@ -4,7 +4,11 @@
 .icono_home:after,
 .icono_mail,
 .icono_mail:before,
-[class*="icono_check"][class*="Circle"],
+/* 去边框 */
+.icono_plus[class*="icono_plus"][class*="Circle"],
+.icono_check[class*="icono_check"][class*="Circle"],
+.icono_plusCircle,
+.icono_checkCircle,
 .icono_power,
 .icono_heart,
 .icono_heart:before,
@@ -136,6 +140,7 @@
 .icono_market:after,
 [class*="icono_textAlign"].icono_textAlignCenter:before,
 [class*="icono_textAlign"].icono_textAlignCenter:after,
+.icono_exclamation,
 [class*="icono_exclamation"]:after,
 .icono_tag:after,
 .icono_cup:after {
@@ -1775,6 +1780,10 @@
 [class*="icono_textAlign"].icono_textAlignLeft:after {
   left: 0;
 }
+[class*="icono_textAlign"].icono_textAlignRight:before,
+[class*="icono_textAlign"].icono_textAlignRight:after {
+  right: 0;
+}
 [class*="icono_exclamation"] {
   overflow: visible;
   width: 30px;
@@ -1809,6 +1818,7 @@
   top: -14px;
   box-shadow: inset 0 0 0 32px, 0 3px, 0 8px;
 }
+.icono_exclamationCircle,
 [class*="icono_exclamation"][class*="Circle"] {
   height: 30px;
   margin: 2px;
