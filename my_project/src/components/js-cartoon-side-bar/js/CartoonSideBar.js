@@ -10,12 +10,13 @@ class CartoonSideBar extends Component {
   }
 
   changeValue = (e) => {
+
     this.setState({
       value: Math.round(e),
     });
 
     document.addEventListener("input", (event) => {
-      const value = Number(e) / 100;
+      const value = Number(this.state.value) / 100;
       let obj = document.documentElement.style;
       obj.setProperty("--thumb-rotate", `${value * 720}deg`);
     });

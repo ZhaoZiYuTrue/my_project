@@ -10,6 +10,7 @@
     "antd": "^4.8.5",
     "babel-plugin-import": "^1.13.1",
     "dva": "^2.4.1",
+    "jquery": "^3.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },

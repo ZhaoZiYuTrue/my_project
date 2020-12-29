@@ -1,0 +1,94 @@
+.body {
+  margin: 0;
+  padding: 30px;
+  background: #f8f8f8;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.grid {
+  max-width: 400px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 150px 150px 50px;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 40px 25px;
+}
+.btn,
+[role="button"] {
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, #d8d9db 0%, #fff 80%, #fdfdfd 100%);
+  border-radius: 30px;
+  border: 1px solid #8f9092;
+  box-shadow: 0 4px 3px 1px #fcfcfc, 0 6px 8px #d6d7d9, 0 -4px 4px #cecfd1,
+    0 -6px 4px #fefefe, inset 0 0 3px 0 #cecfd1;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+}
+.btn::-moz-focus-inner,
+[role="button"]::-moz-focus-inner {
+  border: 0;
+}
+.btn > *,
+[role="button"] > * {
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.btn:hover:not([disabled]),
+[role="button"]:hover:not([disabled]) {
+  box-shadow: 0 4px 3px 1px #fcfcfc, 0 6px 8px #d6d7d9, 0 -4px 4px #cecfd1,
+    0 -6px 4px #fefefe, inset 0 0 3px 3px #cecfd1;
+}
+.btn:hover:not([disabled]) > *,
+[role="button"]:hover:not([disabled]) > * {
+  -webkit-transform: scale(0.975);
+  transform: scale(0.975);
+}
+.btn:focus:not(:active),
+[role="button"]:focus:not(:active) {
+  -webkit-animation: active 0.9s alternate infinite;
+  animation: active 0.9s alternate infinite;
+  outline: none;
+}
+.btn:active:not([disabled]),
+[role="button"]:active:not([disabled]) {
+  box-shadow: 0 4px 3px 1px #fcfcfc, 0 6px 8px #d6d7d9, 0 -4px 4px #cecfd1,
+    0 -6px 4px #fefefe, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+.btn:active:not([disabled]) > *,
+[role="button"]:active:not([disabled]) > * {
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+.btn:disabled,
+[role="button"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.btn.icon,
+[role="button"].icon {
+  width: 50px;
+}
+.btn.icon svg,
+[role="button"].icon svg {
+  margin-top: 3px;
+  width: 30px;
+  height: 30px;
+}
