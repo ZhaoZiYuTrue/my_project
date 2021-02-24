@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "dva";
 import styles from "./IndexPage.less"; // no-unused-vars
-import CartoonBar from "../components/js-cartoon-side-bar/js/CartoonSideBar.js";
 
 class IndexPage extends Component {
   state = {
@@ -114,7 +113,6 @@ class IndexPage extends Component {
         <br />
         <br />
         <div>{this.state.tempValue}</div>
-        <CartoonBar />
       </div>
     );
   };
