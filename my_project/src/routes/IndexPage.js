@@ -8,16 +8,18 @@ class IndexPage extends Component {
   };
 
   getUniqueValueFromArray = () => {
-    let value = [...new Set([1, 2, 3, 3])];
-    console.log(value);
+    let array = [1, 2, 3, 3];
+    console.log("old", array);
+    let value = [...new Set(array)];
+    console.log("new", value);
   };
 
   removeForgeValueFromArray = () => {
-    let myArray = [0, undefined, null, false, 1];
+    let myArray = [0, undefined, null, false, NaN, "", 1];
     // Get rid of bad values
     let temp = myArray.filter(Boolean);
-    console.log('before', myArray);
-    console.log('after', temp);
+    console.log("before", myArray);
+    console.log("after", temp);
   };
 
   // 创建一个纯“字典”对象
@@ -91,6 +93,47 @@ class IndexPage extends Component {
     console.log(urlParams.append("active", "1")); // "?post=1234&action=edit&active=1
   };
 
+  arrayToMap = () => {
+    let array = [
+      { name: "德莱厄斯", location: "TOP" },
+      { name: "李青", location: "JUG" },
+      { name: "亚索", location: "MID" },
+      { name: "薇恩", location: "ADC" },
+      { name: "布里茨", location: "SUP" },
+    ];
+    console.log("Array", array);
+    let map = Array.from(array, ({ name }) => name);
+    console.log("Map", map);
+  };
+
+  intersection = () => {
+    let array = ["0", "1", "2", "3", "4"],
+      _array = ["3", "4", "5", "6", "7"],
+      newArray = [...new Set(array)].filter((item) => _array.includes(item));
+    console.log("数组1", array);
+    console.log("数组2", _array);
+    console.log("交集", newArray);
+  };
+
+  randomHero = () => {
+    let array = ["德莱厄斯", "李青", "亚索", "薇恩", "布里茨"],
+      randomHero = array[Math.floor(Math.random() * array.length)];
+    console.log("所有英雄", array);
+    console.log("获得了", randomHero);
+  };
+
+  getSum = () => {
+    let array = [1, 2, 3, 4],
+      sum = array.reduce((x, y) => x + y);
+    console.log("Array", array);
+    console.log("sum", sum);
+  };
+
+  console = () => {
+    const { 'log': log } = console;
+    log("r u ok?");
+  };
+
   render = () => {
     return (
       <div>
@@ -109,6 +152,11 @@ class IndexPage extends Component {
         <button onClick={() => this.getQueryStringParameters()}>
           获取查询字符串参数
         </button>
+        <button onClick={() => this.arrayToMap()}>Array → Map</button>
+        <button onClick={() => this.intersection()}>获取两个数组的交集</button>
+        <button onClick={() => this.randomHero()}>获取随机英雄</button>
+        <button onClick={() => this.getSum()}>数组元素求和</button>
+        <button onClick={() => this.console()}>console.log便利性写法</button>
         <br />
         <br />
         <br />
